@@ -1,9 +1,8 @@
 import os
 from palavraforca import palavra
 
-DEBUG = False
-
 if __name__ == "__main__":
+    DEBUG = False
     letras_usuario = []
     chances = 3
     ganhou = False
@@ -36,6 +35,6 @@ if __name__ == "__main__":
             break
 
     if ganhou:
-        print(f"Parabéns você venceu a palavra era: {palavra}")
+        print(f"Parabéns você venceu!\nA palavra era: {palavra}")
     else:
-        print(f"Que pena você perdeu a palavra era: {palavra}")
+        print(f"Que pena você perdeu!\nA palavra era: {palavra}")
