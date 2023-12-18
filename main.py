@@ -1,21 +1,25 @@
 import os
 from palavraforca import palavra
 
+DEBUG = False
 
 if __name__ == "__main__":
     letras_usuario = []
-    chances = 4
+    chances = 3
     ganhou = False
 
     while True:
         os.system("clear")
-        print(palavra)
+
+        if DEBUG:
+            print(palavra)
+
         for letra in palavra:
             if letra.lower() in letras_usuario:
                 print(letra, end=" ")
             else:
                 print("_", end=" ")
-        print(f"\nVoce tem {chances} chances")
+        print(f"\nVocê tem {chances} chances")
 
         tentativa = input("Escolha uma letra para adivinhar: ")
         letras_usuario.append(tentativa.lower())
@@ -32,6 +36,6 @@ if __name__ == "__main__":
             break
 
     if ganhou:
-        print(f"Parabens voce venceu a palara: {palavra}")
+        print(f"Parabéns você venceu a palavra era: {palavra}")
     else:
-        print(f"Que pena voce perdeu a palara era: {palavra}")
+        print(f"Que pena você perdeu a palavra era: {palavra}")
